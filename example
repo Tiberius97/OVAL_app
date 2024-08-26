@@ -1,0 +1,34 @@
+{
+            "vulner_id": "oval:com.redhat.rhba:def:20191992",
+            "metadata": {
+                "title": "RHBA-2019:1992: cloud-init bug fix and enhancement update (Moderate)",
+                "description": "The cloud-init packages provide a set of init scripts for cloud instances. Cloud instances need special scripts to run during initialization to retrieve and install SSH keys, and to let the user run various scripts.\n\nUsers of cloud-init are advised to upgrade to these updated packages.",
+                "CVE": {
+                    "CVE-2019-0816": {
+                        "cvss3": "5.4/CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N",
+                        "cwe": "CWE-285",
+                        "href": "https://access.redhat.com/security/cve/CVE-2019-0816",
+                        "impact": "moderate",
+                        "public": "20190305"
+                    }
+                },
+                "last_date": "2019-07-30"
+            },
+            "criteria": {
+                "comment": "cloud-init is earlier than 0:18.5-1.el8.4",
+                "test_ref": "oval:com.redhat.rhba:tst:20191992001",
+                "check": "at least one",
+                "object": {
+                    "name": {
+                        "object_info": "cloud-init"
+                    }
+                },
+                "state": {
+                    "evr": {
+                        "datatype": "evr_string",
+                        "operation": "less than",
+                        "condition": "0:18.5-1.el8.4"
+                    }
+                }
+            }
+        }
